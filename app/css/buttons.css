@@ -1,0 +1,177 @@
+/*
+  Buttons.css by Mrthomas20121
+  Copyright Thomas B (c) 2018
+*/
+a.button, button.button {
+  margin: 15px;
+  font-weight: 400;
+  border: 2px solid #0FEDBA; /* default border color */
+  text-decoration: none;
+  padding: 6px;
+  text-transform: uppercase;
+  color: #0FEDBA; /* default color */
+  transition: all 0.7s cubic-bezier(0, 0.7, 0.26, 0.99);
+  display: inline-block;
+  text-decoration:none;
+  cursor:pointer;
+  background-color: inherit;
+  outline:none !important /* remove the outline on chrome */;
+}
+/* fill the button on hover state */
+a.button:hover, button.button:hover  {
+  background-color: #0FEDBA;
+  color: black;
+  transition: all 0.7s cubic-bezier(0, 0.7, 0.26, 0.99);
+  text-decoration:none;
+  transform: scale(1.2);
+  outline:none !important /* remove the outline on chrome */;
+}
+/* scale down button when on active state */
+a.button:active, button.button:active {
+  transform: scale(1.1);
+  outline:none !important /* remove the outline on chrome */
+}
+
+  a.button.fill, button.button.fill {
+  border-color:#0FEDBA;
+  background:#0FEDBA;
+  color:black;
+}
+
+/* green button */
+
+a.button.green, button.button.green {
+  border-color:#11B53D;
+  color:#11B53D;
+}
+a.button.green.fill, button.button.green.fill {
+  border-color:#11B53D;
+  background:#11B53D;
+  color:#fff;
+}
+a.button:hover.green, button.button:hover.green  {
+  background-color: #11B53D;
+  color: white;
+}
+
+/* blue button */
+
+a.button.blue, button.button.blue {
+  border-color:#256EF4;
+  color:#256EF4;
+}
+a.button.blue.fill, button.button.blue.fill {
+  border-color:#256EF4;
+  background:#256EF4;
+  color:#fff;
+}
+a.button:hover.blue, button.button:hover.blue  {
+  background-color: #256EF4;
+  color: white;
+}
+
+/*
+Purple button
+*/
+
+a.button.purple, button.button.purple {
+  border-color:#B47FAE;
+  color:#B47FAE;
+}
+a.button.purple.fill, button.button.purple.fill {
+  border-color:#B47FAE;
+  background:#B47FAE;
+  color:#fff;
+}
+a.button:hover.purple, button.button:hover.purple  {
+  background-color: #B47FAE;
+  color: white;
+}
+
+/*
+Yellow button
+*/
+
+a.button.yellow, button.button.yellow {
+  border-color:#FBFE13;
+  color:#FBFE13;
+}
+a.button.yellow.fill, button.button.yellow.fill {
+  border-color:#FBFE13;
+  background:#FBFE13;
+  color:black;
+}
+a.button:hover.yellow, button.button:hover.yellow  {
+  background-color: #FBFE13;
+  color: black;
+}
+
+/*
+Lime button
+*/
+
+a.button.lime, button.button.lime {
+  border-color:#00FF61;
+  color:#00FF61;
+}
+a.button.lime.fill, button.button.lime.fill {
+  border-color:#00FF61;
+  background:#00FF61;
+  color:black;
+}
+a.button:hover.lime, button.button:hover.lime  {
+  background-color: #00FF61;
+  color: black;
+}
+
+/*
+Salmon button
+*/
+a.button.salmon, button.button.salmon {
+  border-color:#D17A78;
+  color:#D17A78;
+}
+a.button.salmon.fill, button.button.salmon.fill {
+  border-color:#D17A78;
+  background:#D17A78;
+  color:white;
+}
+a.button:hover.salmon, button.button:hover.salmon  {
+  background-color: #D17A78;
+  color: white;
+}
+
+/*
+Dark green button
+*/
+
+a.button.darkgreen, button.button.darkgreen {
+  border-color:#165D1C;
+  color:#165D1C;
+}
+a.button.darkgreen.fill, button.button.darkgreen.fill {
+  border-color:#165D1C;
+  background:#165D1C;
+  color:white;
+}
+a.button:hover.darkgreen, button.button:hover.darkgreen  {
+  background-color: #165D1C;
+  color: white;
+}
+
+/* Round buttons */
+a.button.round, button.button.round {
+  border-radius: 26px;
+}
+
+a.button.round.ten, button.button.round.ten {
+  border-radius: 10px;
+}
+a.button:hover.noAnim, button.button:hover.noAnim  {
+  transition: all 0.7s cubic-bezier(0, 0.7, 0.26, 0.99);
+  text-decoration:none;
+  transform: scale(1.0);
+}
+a.button:active.noAnim, button.button:active.noAnim {
+  transform: scale(1.0);
+}

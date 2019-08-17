@@ -1,0 +1,24 @@
+{
+  "name": "barbu-app",
+  "version": "1.0.0",
+  "description": "a simple Text editor",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^1.6.2",
+    "electron-packager": "^8.6.0",
+    "electron-tooltip": "^1.1.5",
+    "bootstrap": "^3.3.7",
+    "bootswatch": "^3.3.7",
+    "jquery": "^3.2.1"
+  },
+  "scripts": {
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Tutorial App\"",
+    "package-linux": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds",
+    "build": "electron-packager ./ one-brick-office --asar=true --icon=./assets/icons/main.ico --version-string.LegalCopyright=Mrthomas20121 --version-string.CompanyName=Mrthomas20121 --version-string.FileDescription=HomeworkViewer --version-string.ProductName=HomeworkViewer --version-string.OriginalFilename=HomeworkViewer.exe"
+  },
+  "author": "Mrthomas20121",
+  "license": "ISC"
+}

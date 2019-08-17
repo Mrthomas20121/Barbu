@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title id="">
+     Barbu
+    </title>
+    <!-- including bootstrap and stuff -->
+      <script>
+        window.$ = window.jQuery = require('../node_modules/jquery/dist/jquery.js');
+      </script>
+      <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+      <link rel="stylesheet" href="../node_modules/bootswatch/yeti/bootstrap.css"/>
+      <link rel="stylesheet" href="./css/buttons.css">
+      <script src="./scripts/game.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-md-6">
+        <div class="form-group" id="add">
+          <label for="player_numbers">Nombre de joueurs</label>
+          <input id="nb" type="number" class="form-control" name="player_numbers"/><button class="button salmon round" onclick="addPlayersInputs()">Ajoute les joueurs</button>
+        </div>
+      </div>
+      <div id="players">
+
+      </div>
+    </div>
+  </body>  
+</html>

@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title id="">
+     Barbu
+    </title>
+    <!-- including bootstrap and stuff -->
+      <script>
+        window.$ = window.jQuery = require('../node_modules/jquery/dist/jquery.js');
+      </script>
+      <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+      <link rel="stylesheet" href="../node_modules/bootswatch/yeti/bootstrap.css"/>
+      <link rel="stylesheet" href="./css/buttons.css">
+  </head>
+  <body onload="showPlayers()">
+    <div class="container-fluid">
+      <div>
+        <label for="points">Points:</label>
+        <input type="text" name="points" id="points" placeholder="ex: 10" class="form-control"/>
+        <label for="select">Player:</label><select name="select" id="playersSelect" class="form-control">
+
+        </select>
+        <button type="" onclick="addPoints()" class="button salmon round">Add Points</button>
+      </div>
+    </div>
+    <script src="./scripts/game.js"></script>
+  </body>  
+</html>

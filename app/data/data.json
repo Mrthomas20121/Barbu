@@ -1,0 +1,32 @@
+{
+  "Joueur1": {
+    "choix": {
+      "pas-de-coeur": false,
+      "roi-de-coeur": false,
+      "pas-de-plis": false,
+      "deux-dernier-plis": false,
+      "pas-de-dame": false,
+      "réussite": false,
+      "salade": false
+    },
+    "points": [
+      0,
+      10
+    ]
+  },
+  "Joueur2": {
+    "choix": {
+      "pas-de-coeur": false,
+      "roi-de-coeur": false,
+      "pas-de-plis": false,
+      "deux-dernier-plis": false,
+      "pas-de-dame": false,
+      "réussite": false,
+      "salade": false
+    },
+    "points": [
+      0,
+      5
+    ]
+  }
+}

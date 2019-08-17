@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title id="">
+     Barbu
+    </title>
+    <!-- including bootstrap and stuff -->
+      <script>
+        window.$ = window.jQuery = require('../node_modules/jquery/dist/jquery.js');
+      </script>
+      <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+      <link rel="stylesheet" href="../node_modules/bootswatch/yeti/bootstrap.css"/>
+      <link rel="stylesheet" href="./css/buttons.css">
+  </head>
+  <body onload="showPlayers()">
+    <div class="container-fluid">
+      <div>
+        <label for="choice">Action:</label><select type="text" name="choice" id="choice" class="form-control"></select>
+        <label for="select">Player:</label><select name="select" id="playersSelect" class="form-control">
+
+        </select>
+        <button type="" onclick="chooseAction()" class="button salmon round">Choisis une action</button>
+      </div>
+    </div>
+    <script src="./scripts/game.js"></script>
+  </body>  
+</html>
