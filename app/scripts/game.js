@@ -1,6 +1,96 @@
 // game lobby
 function createNewGameLobby() {
-  location.assign('./lobby.html');
+  location.assign('./lobby.html')
+}
+/**
+ * 
+ * @param {String} tableName
+ * @param {String} id div id where the table should be
+ * @param {String[]} players
+ * @returns String
+ */
+function drawTable(tableName, id, players)
+{
+  // variables
+  var div = document.getElementById(id)
+  var table = document.createElement('table')
+  var thead = document.createElement('thead')
+  var tbody = document.createElement('tbody')
+  var play = table.insertRow(0)
+  var firstRow = document.createElement('tr')
+
+  // assign
+  table.id = tableName
+  table.classList.add('table','table-bordered', 'table-dark', 'table-hover', 'align-middle')
+  thead.id = `${tableName}_head`
+  tbody.id = `${tableName}_body`
+
+  for(let i = 0; i<players.length;i++)
+  {
+    let playTd = getRow(play, players[i], i)
+    play.append(playTd)
+    let firstTd = getRow(firstRow, i==0 ? 'tour 0' : 0,i)
+    firstRow.append(firstTd)
+  }
+  thead.append(play)
+  tbody.append(firstRow)
+  table.append(thead)
+  table.append(tbody)
+  div.append(table)
+}
+
+/**
+ * 
+ * @param {html} content
+ */
+function getRow(tr, html, i)
+{
+  var td = tr.insertCell(i)
+  td.innerHTML = html
+  return td
+}
+
+function addRow(tableName='table_player')
+{
+  var table = document.getElementById(tableName)
+  table.insertRow(0)
+}
+
+function start()
+{
+  const table = 'table_player'
+  const div = 'table'
+  const thead = `${table}_head`
+  const tbody = `${table}_body`
+  const config = loadConfig()
+  drawTable(table, div, config.players)
+}
+/**
+ * @returns {{players:{ data:String[]}, config:any}}
+ */
+function loadConfig()
+{
+  const config = readConfig('base')
+  var players = null
+  if(config.loadFromConfig)
+  {
+    players = readConfig('players') 
+  }
+  return {
+    players:players.data,
+    config
+  }
+}
+
+/**
+ * @returns String
+ * @param {String} file 
+ */
+function readConfig(file)
+{
+  const fs = require('fs')
+  const content = fs.readFileSync(`./app/config/${file}.json`, 'utf8')
+  return JSON.parse(content)
 }
 
 // add player inputs based on the number of players
@@ -85,8 +175,10 @@ function gameLoading() {
   let elem = document.getElementById('score');
   for (let i = 0; i <  json[playerKeys[0]].points.length; i++) {
     let tr = document.createElement('tr');
-
+    let totalScore = [];
     for (const player of playerKeys) {
+      totalScore[player] = totalScore[player] + json[player].points[i];
+
       let td = document.createElement('td');
       td.innerHTML = json[player].points[i];
       tr.append(td);
@@ -115,10 +207,15 @@ function addPoints() {
   let json = getData();
   let player = document.getElementById('playersSelect').value;
   let point = document.getElementById('points').value;
-  // add 
-  console.log(json[player].points[json[player].points.length-1], parseInt(point));
-  json[player].points.push(json[player].points[json[player].points.length-1] + parseInt(point));
-  fs.writeFileSync('./app/data/data.json', JSON.stringify(json, null, 2));
+  // add points to player
+  if(point != '' && !Number.isNaN(point)) {
+	  console.log(json[player].points[json[player].points.length-1], parseInt(point));
+	  json[player].points.push(json[player].points[json[player].points.length-1] + parseInt(point));
+	  fs.writeFileSync('./app/data/data.json', JSON.stringify(json, null, 2));
+  }
+
+  // reload menu when it's done
+  location.reload();
 }
 
 function chooseAction() {
