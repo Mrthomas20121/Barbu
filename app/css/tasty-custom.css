@@ -1,0 +1,20 @@
+/*
+Tasty-custom.css
+Generate by Tasty.js
+*/
+a.button.cyan, button.button.cyan
+{
+ border-color:#13A28D;
+ color:#13A28D; 
+}
+a.button.cyan.fill, button.button.cyan.fill 
+{
+ border-color:#13A28D;
+ background:#13A28D; 
+ color:black;
+}
+a.button:hover.cyan, button.button:hover.cyan
+{
+ background-color: #13A28D;
+ color: black;
+}
