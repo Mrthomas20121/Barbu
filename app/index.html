@@ -1,26 +1,27 @@
 <html>
   <head>
     <meta charset="UTF-8"/>
-    <title id="">
+    <title id="game">
      Barbu
     </title>
-    <!-- including bootstrap and stuff -->
-      <script>
-        window.$ = window.jQuery = require('../node_modules/jquery/dist/jquery.js');
-      </script>
-      <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
-      <link rel="stylesheet" href="../node_modules/bootswatch/yeti/bootstrap.css"/>
-      <link rel="stylesheet" href="./css/Tasty.css">
-      <script src="./scripts/game.js"></script>
+    <!-- bootstrap and its dependencies -->
+    <script src="./scripts/bootstrap.min.js"></script>
+    <script src="./scripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+
+    <!-- our custom css/scripts -->
+    <link rel="stylesheet" href="./css/Tasty.css">
+    <script src="./scripts/game.js"></script>
   </head>
-  <body onload="game.reset();">
+  <body class="bg-dark">
     <div class="container">
-      <button class="button purple round ten" onclick="createNewGameLobby()">Créee une nouvelle partie</button>
-      <button class="button cyan round ten" onclick="location.assign('./game.html')">Continue une partie</button>
+      <div>
+        <button class="button purple round ten noAnim" onclick="createNewGameLobby()">Créee une nouvelle partie</button>
+        <button class="button cyan round ten noAnim" onclick="location.assign('./game.html')">Continue une partie</button>
+      </div>
     </div>
 	<script src="./scripts/Tasty.js"></script>
 	<script>
-    Tasty.addCustomColor('7D57BA', 'purple').GenerateCss()
     Tasty.addCustomColor('13A28D', 'cyan').GenerateCss()
 	</script>
   </body>  
