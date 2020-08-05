@@ -5,12 +5,9 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "electron": "^1.6.2",
+    "electron": "^1.8.8",
     "electron-packager": "^8.6.0",
-    "electron-tooltip": "^1.1.5",
-    "bootstrap": "^3.3.7",
-    "bootswatch": "^3.3.7",
-    "jquery": "^3.2.1"
+    "electron-tooltip": "^1.1.5"
   },
   "scripts": {
     "start": "electron .",
