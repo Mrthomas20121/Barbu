@@ -2,8 +2,8 @@
 function createNewGameLobby() {
   location.assign('./lobby.html')
 }
+
 /**
- * 
  * @param {String} tableName
  * @param {String} id div id where the table should be
  * @param {String[]} players
