@@ -1,5 +1,5 @@
 {
-  "Joueur1": {
+  "Olivier": {
     "choix": {
       "pas-de-coeur": false,
       "roi-de-coeur": false,
@@ -11,10 +11,12 @@
     },
     "points": [
       0,
-      10
+      -50,
+      70,
+      160
     ]
   },
-  "Joueur2": {
+  "Thomas": {
     "choix": {
       "pas-de-coeur": false,
       "roi-de-coeur": false,
@@ -26,7 +28,38 @@
     },
     "points": [
       0,
-      5
+      -25,
+      55
+    ]
+  },
+  "Gregoire": {
+    "choix": {
+      "pas-de-coeur": false,
+      "roi-de-coeur": false,
+      "pas-de-plis": false,
+      "deux-dernier-plis": false,
+      "pas-de-dame": false,
+      "réussite": false,
+      "salade": false
+    },
+    "points": [
+      0,
+      0
+    ]
+  },
+  "Matthieux": {
+    "choix": {
+      "pas-de-coeur": false,
+      "roi-de-coeur": false,
+      "pas-de-plis": false,
+      "deux-dernier-plis": false,
+      "pas-de-dame": false,
+      "réussite": false,
+      "salade": false
+    },
+    "points": [
+      0,
+      -100
     ]
   }
 }
