@@ -3,3 +3,6 @@ node_modules
 
 # ignore any code workspace
 *.code-workspace
+
+# ignore data files
+data.json
